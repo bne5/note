@@ -1,0 +1,6 @@
+<h1> Stickys </h1>
+<p><%= link_to "New Sticky", new_sticky_path %></p>
+<% @stickys.each do |sticky| %>
+  <h2><%= sticky.title %></h2>
+  <%= link_to 'Show Sticky', sticky_path(sticky.id) %>
+<% end %>

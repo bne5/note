@@ -1,0 +1,2 @@
+module StickysHelper
+end
