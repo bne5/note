@@ -21,6 +21,20 @@ class StickysController < ApplicationController
     end
   end
 
+  def edit
+    @sticky = Sticky.find(params[:id])
+  end
+
+  def update
+    @sticky = Sticky.find(params[:id])
+
+    if @sticky.update(sticky_params)
+      redirect_to stickys_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def stickys_params
